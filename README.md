@@ -2,7 +2,8 @@
 
 a game where you guess a random number
 
-(image)
+<img width="931" height="550" alt="image" src="https://github.com/user-attachments/assets/a4264d95-dc79-4a46-9ba0-77ecc4b721b3" />
+
 
 ## How to play
 
