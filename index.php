@@ -9,6 +9,13 @@ if (!isset($_SESSION["number"])){
     $_SESSION["best_score"] = null; 
 }
 
+if (isset($_POST["new_game"])){
+    $_SESSION["number"] = rand(1,100);
+    $_SESSION["attempts"] = 0;
+    $_SESSION["message"] = "guess the number from 1 to 100";
+    $_SESSION["over"] = false;
+}
+
 if (isset($_POST["guess"]) && ! $_SESSION["over"]){
     $guess = (int)$_POST["guess"];
     $number = $_SESSION["number"];
