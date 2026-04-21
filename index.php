@@ -34,6 +34,59 @@ if (isset($_POST["guess"]) && ! $_SESSION["over"]){
             $_SESSION['best_score'] = $_SESSION['attempts'];
         }
     }
+
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the number game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Guess the number game</h1>
+        <div class="stats">
+            <?php
+            if ($_SESSION["best_score"]){
+                echo "<p>best score: {$_SESSION["best_score"]} attempts</p>";
+            }
+            else{
+                echo "best score: not set yet";
+            }
+            ?>
+            <?php 
+            echo "<p>attempts: {$_SESSION["attempts"]}</p>"
+            ?>
+        </div>
+
+        <div class="message">
+            <?php
+            echo "<p>{$_SESSION["message"]}</p>"
+            ?>
+        </div>
+
+        <?php
+        if (! $_SESSION["over"]){
+            echo '
+            <form method="post" class="guess-form">
+                <input type="number" name="guess" min="1" max="100" placeholder="Enter your guess (1-100)" required>
+                <button type="submit">Guess</button>
+            </form>
+            ';
+        }
+        ?>
+
+        <div class="actions">
+        <form method="post" style="display: inline;">
+            <button type="submit" name="new_game" class="btn-new">New Game</button>
+        </form>
+        </div>
+
+    </div>
     
+</body>
+</html>
 }
 ?>
