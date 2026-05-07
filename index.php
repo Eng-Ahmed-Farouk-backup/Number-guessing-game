@@ -4,23 +4,19 @@ session_start();
 if (!isset($_SESSION["number"])){
     $_SESSION["number"] = rand(1,100);
     $_SESSION["attempts"] = 0;
-    $_SESSION["message"] = "guess the number from 1 to 100";
+    $_SESSION["message"] = "guess number from 1 to 100";
     $_SESSION["over"] = false;
     $_SESSION["best_score"] = null; 
 }
-
 if (isset($_POST["new_game"])){
     $_SESSION["number"] = rand(1,100);
     $_SESSION["attempts"] = 0;
     $_SESSION["message"] = "guess the number from 1 to 100";
-    $_SESSION["over"] = false;
-}
-
+    $_SESSION["over"] = false;}
 if (isset($_POST["guess"]) && ! $_SESSION["over"]){
     $guess = (int)$_POST["guess"];
     $number = $_SESSION["number"];
     $_SESSION["attempts"] = $_SESSION["attempts"] + 1;
-
     if ($guess > $number){
         $_SESSION["message"] = "too high, try again";
     }
@@ -34,8 +30,6 @@ if (isset($_POST["guess"]) && ! $_SESSION["over"]){
             $_SESSION['best_score'] = $_SESSION['attempts'];
         }
     }
-
-
     <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,13 +54,11 @@ if (isset($_POST["guess"]) && ! $_SESSION["over"]){
             echo "<p>attempts: {$_SESSION["attempts"]}</p>"
             ?>
         </div>
-
         <div class="message">
             <?php
             echo "<p>{$_SESSION["message"]}</p>"
             ?>
         </div>
-
         <?php
         if (! $_SESSION["over"]){
             echo '
@@ -74,18 +66,14 @@ if (isset($_POST["guess"]) && ! $_SESSION["over"]){
                 <input type="number" name="guess" min="1" max="100" placeholder="Enter your guess (1-100)" required>
                 <button type="submit">Guess</button>
             </form>
-            ';
-        }
+            ';    }
         ?>
-
         <div class="actions">
         <form method="post" style="display: inline;">
             <button type="submit" name="new_game" class="btn-new">New Game</button>
         </form>
         </div>
-
     </div>
-    
 </body>
 </html>
 }
