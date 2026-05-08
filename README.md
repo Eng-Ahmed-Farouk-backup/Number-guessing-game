@@ -2,7 +2,7 @@
 
 a game where you guess a random number
 
-<img width="931" height="550" alt="image" src="https://github.com/user-attachments/assets/a4264d95-dc79-4a46-9ba0-77ecc4b721b3" />
+<img width="1366" height="641" alt="image" src="https://github.com/user-attachments/assets/b5181872-9a9d-4945-9bf3-40ecec537bbe" />
 
 
 ## How to play
