@@ -29,4 +29,4 @@ this is PHP Website game Made By Ahmed Farouk Passionate about STEAM, Entreprene
 
 - Leader of Innovations Hack Club
 - Founder & CEO of Adapt Community
-- Ex Contractor @ Hack club under the Management of Christina (the co founder)
+- Present Contractor @ Hack club under the Management of Christina (the co founder)
