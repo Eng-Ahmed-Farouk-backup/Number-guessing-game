@@ -28,8 +28,8 @@ if (isset($_POST["guess"]) && ! $_SESSION["over"]){
         $_SESSION["over"] = true;
         if ($_SESSION['best_score'] === null || $_SESSION['attempts'] < $_SESSION['best_score']) {
             $_SESSION['best_score'] = $_SESSION['attempts'];
-        }
-    }
+        }}}
+?>
     <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,5 +76,4 @@ if (isset($_POST["guess"]) && ! $_SESSION["over"]){
     </div>
 </body>
 </html>
-}
 ?>
