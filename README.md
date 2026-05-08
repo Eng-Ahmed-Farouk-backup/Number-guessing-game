@@ -7,7 +7,7 @@ a game where you guess a random number
 
 ## How to play
 
-enter this link -> https://number-guessing-game.gamer.gd/
+enter this link -> https://numbers-game.thsite.top/
 
 1. enter your guess
 2. if the secret number is lower it will say "too high"
